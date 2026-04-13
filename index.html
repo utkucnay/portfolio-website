@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utkucan Ay - Engine & Systems Programmer</title>
+    <meta name="description" content="Portfolio of Utkucan Ay — engine and systems programmer with professional experience in commercial game development across gameplay, live-ops, and UI systems. Specializing in data-oriented design, custom memory management, and high-performance C++ systems." />
+    <meta name="author" content="Utkucan Ay" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Utkucan Ay - Engine & Systems Programmer" />
+    <meta property="og:description" content="Engine and systems programmer with professional experience in commercial game development. Specializing in data-oriented design, custom memory management, and high-performance C++ systems." />
+    <meta property="og:url" content="https://utkucnay.github.io/" />
+    <meta property="og:site_name" content="Utkucan Ay" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Utkucan Ay - Engine & Systems Programmer" />
+    <meta name="twitter:description" content="Engine and systems programmer with professional experience in commercial game development. Specializing in data-oriented design, custom memory management, and high-performance C++ systems." />
+
+    <link rel="stylesheet" href="/src/style.css" />
+    <!-- Pre-load theme script to prevent FOUC -->
+    <script>
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300 antialiased">
+    
+    <!-- Sticky Header -->
+    <header role="banner" class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800/60 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0">
+            <a href="#" class="text-xl font-bold tracking-tight text-gray-900 dark:text-white transition-colors">Utkucan Ay</a>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <!-- Desktop Menu -->
+            <nav aria-label="Main navigation" class="hidden md:flex space-x-6">
+              <a href="#about" class="nav-link text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+              <a href="#experience" class="nav-link text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+              <a href="#projects" class="nav-link text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+              <a href="#skills" class="nav-link text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+              <a href="#contact" class="nav-link text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+            </nav>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="text-gray-500 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-slate-800 rounded-lg text-sm p-2.5 transition-colors">
+              <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+              <button id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white focus:outline-none p-1 transition-colors">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" aria-label="Mobile navigation" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">About</a>
+          <a href="#experience" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">Experience</a>
+          <a href="#projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">Projects</a>
+          <a href="#skills" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">Skills</a>
+          <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800/50 transition-colors">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <!-- Hero / About Section -->
+      <section id="about" class="py-20 lg:py-32 bg-white dark:bg-slate-950 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row items-center gap-12">
+          <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-indigo-100 dark:bg-slate-900 flex items-center justify-center flex-shrink-0 border-4 border-white dark:border-slate-800 shadow-lg dark:shadow-slate-900/50 transition-colors overflow-hidden relative animate-on-scroll md:order-2">
+            <span id="avatar-initials" class="text-4xl text-indigo-500 dark:text-indigo-400 font-bold absolute z-0">UA</span>
+            <img id="github-avatar" alt="Utkucan Ay" class="w-full h-full object-cover z-10 opacity-0 transition-opacity duration-500" />
+          </div>
+          <div class="flex-1 animate-on-scroll md:order-1">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4 transition-colors">
+              Hi, I'm <span class="text-indigo-600 dark:text-indigo-400">Utkucan Ay</span>
+            </h1>
+            <h2 class="text-2xl font-bold text-gray-700 dark:text-slate-300 mb-4">Engine & Systems Programmer</h2>
+            <p class="text-xl text-gray-600 dark:text-slate-400 mb-8 max-w-2xl transition-colors">
+              Software engineer with professional experience in commercial game development across <span class="font-semibold text-gray-900 dark:text-white">gameplay</span>, <span class="font-semibold text-gray-900 dark:text-white">live-ops</span>, and <span class="font-semibold text-gray-900 dark:text-white">UI systems</span>. In parallel with production work, I have been studying and building low-level engine programming concepts including <span class="font-semibold text-gray-900 dark:text-white">data-oriented design</span>, <span class="font-semibold text-gray-900 dark:text-white">CPU-conscious optimization</span>, <span class="font-semibold text-gray-900 dark:text-white">custom memory management</span>, <span class="font-semibold text-gray-900 dark:text-white">allocator design</span>, and high-performance <span class="font-semibold text-gray-900 dark:text-white">C++ systems</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="#projects" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-500 transition-colors">
+                View Projects
+              </a>
+              <a href="#contact" class="inline-flex justify-center items-center px-6 py-3 border border-gray-300 dark:border-slate-700 shadow-sm text-base font-medium rounded-md text-gray-700 dark:text-slate-200 bg-white dark:bg-slate-800/50 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-20 bg-gray-50 dark:bg-slate-900/40 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center transition-colors animate-on-scroll">Professional Experience</h2>
+          
+          <!-- ===================== MOBILE LAYOUT (< md) ===================== -->
+          <div class="md:hidden">
+            <div class="flex">
+              <!-- Left: timeline line (dots positioned by JS) -->
+              <div id="mobile-line-visible" class="timeline-line-mobile">
+              </div>
+              <!-- Right: cards stacked -->
+              <div class="flex-1 flex flex-col gap-8 pl-4">
+
+                <!-- Mobile Job 1: Gullivers -->
+                <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors">
+                  <div class="flex flex-col items-start mb-1">
+                    <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Game Developer</h3>
+                    <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Oct 2025 - Feb 2026</span>
+                  </div>
+                  <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Gullivers Games &bull; Turkey (Onsite)</div>
+                  <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                    <li>Implemented mobile game events and live-ops content for <span class="font-semibold text-gray-900 dark:text-white">Word Tiles GO</span> in a production environment.</li>
+                    <li>Remade the <span class="font-semibold text-gray-900 dark:text-white">leaderboard system</span> and integrated related UI flows into the existing codebase.</li>
+                    <li>Developed <span class="font-semibold text-gray-900 dark:text-white">responsive UI layouts</span> to support various devices and screen sizes.</li>
+                  </ul>
+                </div>
+
+                <!-- Mobile Job 2: Universe -->
+                <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors">
+                  <div class="flex flex-col items-start mb-1">
+                    <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Gameplay / Systems Programmer</h3>
+                    <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Dec 2024 - Oct 2025</span>
+                  </div>
+                  <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">The Universe Platform &bull; Turkey (Remote)</div>
+                  <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                    <li>Extended the bridge between the <span class="font-semibold text-gray-900 dark:text-white">custom scripting language</span> and the internal game engine to support gameplay systems and feature development.</li>
+                    <li>Researched and prototyped game concepts to evaluate ideas for <span class="font-semibold text-gray-900 dark:text-white">mini-game production</span>.</li>
+                    <li>Built a reusable <span class="font-semibold text-gray-900 dark:text-white">multiplayer mini-game template</span> that handled synchronization concerns such as <span class="font-semibold text-gray-900 dark:text-white">time sync</span> and <span class="font-semibold text-gray-900 dark:text-white">game state sync</span>.</li>
+                    <li>Developed 2 multiplayer mini-games using the shared template to speed up development and improve consistency.</li>
+                    <li>Implemented <span class="font-semibold text-gray-900 dark:text-white">CI/CD workflows</span> for Windows, macOS, and Android using <span class="font-semibold text-gray-900 dark:text-white">Docker</span> and <span class="font-semibold text-gray-900 dark:text-white">GitHub Actions</span>.</li>
+                  </ul>
+                </div>
+
+                <!-- Mobile Job 3: Arvis -->
+                <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors">
+                  <div class="flex flex-col items-start mb-1">
+                    <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Game Developer</h3>
+                    <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Apr 2024 - Oct 2024</span>
+                  </div>
+                  <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Arvis Games &bull; Turkey (Remote)</div>
+                  <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                    <li>Developed <span class="font-semibold text-gray-900 dark:text-white">purchasable item features</span>, resolved production bugs, and handled live-ops tasks for <span class="font-semibold text-gray-900 dark:text-white">Deck Dash</span>.</li>
+                    <li>Built a new <span class="font-semibold text-gray-900 dark:text-white">animation system</span> that improved content integration workflows and increased art team productivity.</li>
+                    <li>Collaborated with team members to implement gameplay features utilizing <span class="font-semibold text-gray-900 dark:text-white">Zenject</span> for dependency injection.</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Mobile Hidden Jobs -->
+            <div class="hidden-experience-group hidden">
+              <div class="flex">
+                <!-- Left: timeline line (dots positioned by JS) -->
+                <div id="mobile-line-hidden" class="timeline-line-mobile">
+                </div>
+                <!-- Right: hidden cards -->
+                <div class="flex-1 flex flex-col gap-8 pl-4 pt-8">
+
+                  <!-- Mobile Job 4: Masomo -->
+                  <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors">
+                    <div class="flex flex-col items-start mb-1">
+                      <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Intern Game Developer</h3>
+                      <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Nov 2023 - Jan 2024</span>
+                    </div>
+                    <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Masomo &bull; Turkey (Remote)</div>
+                    <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                      <li>Engineered an Arkanoid clone utilizing <span class="font-semibold text-gray-900 dark:text-white">C++</span> and <span class="font-semibold text-gray-900 dark:text-white">Cocos2d-x</span>, focusing on manual memory management and core game loops.</li>
+                      <li>Designed and implemented a custom <span class="font-semibold text-gray-900 dark:text-white">Dependency Injection</span> framework from scratch to enforce decoupled, modular code architecture.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Mobile Job 5: Codeo -->
+                  <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors">
+                    <div class="flex flex-col items-start mb-1">
+                      <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Intern Tool Developer</h3>
+                      <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Oct 2023 - Nov 2023</span>
+                    </div>
+                    <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Codeo &bull; Turkey (Remote)</div>
+                    <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                      <li>Engineered specialized <span class="font-semibold text-gray-900 dark:text-white">Unity editor tools</span> to automate repetitive content setup and optimize internal workflows.</li>
+                      <li>Refined <span class="font-semibold text-gray-900 dark:text-white">UX design</span> for internal pipeline tools, enabling faster iteration times for the development team.</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================== DESKTOP LAYOUT (md+) ===================== -->
+          <div class="hidden md:grid grid-cols-[1fr_auto_1fr] gap-x-10">
+
+            <!-- LEFT COLUMN: Jobs 1, 3 (and hidden Job 5) -->
+            <div class="flex flex-col gap-8">
+
+              <!-- Desktop Job 1: Gullivers (LEFT) -->
+              <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors text-left">
+                <div class="flex flex-col items-start mb-1">
+                  <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Game Developer</h3>
+                  <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Oct 2025 - Feb 2026</span>
+                </div>
+                <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Gullivers Games &bull; Turkey (Onsite)</div>
+                <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                  <li>Implemented mobile game events and live-ops content for <span class="font-semibold text-gray-900 dark:text-white">Word Tiles GO</span> in a production environment.</li>
+                  <li>Remade the <span class="font-semibold text-gray-900 dark:text-white">leaderboard system</span> and integrated related UI flows into the existing codebase.</li>
+                  <li>Developed <span class="font-semibold text-gray-900 dark:text-white">responsive UI layouts</span> to support various devices and screen sizes.</li>
+                </ul>
+              </div>
+
+              <!-- Desktop Job 3: Arvis (LEFT) -->
+              <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors text-left">
+                <div class="flex flex-col items-start mb-1">
+                  <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Game Developer</h3>
+                  <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Apr 2024 - Oct 2024</span>
+                </div>
+                <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Arvis Games &bull; Turkey (Remote)</div>
+                <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                  <li>Developed <span class="font-semibold text-gray-900 dark:text-white">purchasable item features</span>, resolved production bugs, and handled live-ops tasks for <span class="font-semibold text-gray-900 dark:text-white">Deck Dash</span>.</li>
+                  <li>Built a new <span class="font-semibold text-gray-900 dark:text-white">animation system</span> that improved content integration workflows and increased art team productivity.</li>
+                  <li>Collaborated with team members to implement gameplay features utilizing <span class="font-semibold text-gray-900 dark:text-white">Zenject</span> for dependency injection.</li>
+                </ul>
+              </div>
+
+              <!-- Desktop Hidden: Job 5 Codeo (LEFT) -->
+              <div class="hidden-experience-group hidden">
+                <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors text-left">
+                  <div class="flex flex-col items-start mb-1">
+                    <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Intern Tool Developer</h3>
+                    <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Oct 2023 - Nov 2023</span>
+                  </div>
+                  <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Codeo &bull; Turkey (Remote)</div>
+                  <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                    <li>Engineered specialized <span class="font-semibold text-gray-900 dark:text-white">Unity editor tools</span> to automate repetitive content setup and optimize internal workflows.</li>
+                    <li>Refined <span class="font-semibold text-gray-900 dark:text-white">UX design</span> for internal pipeline tools, enabling faster iteration times for the development team.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CENTER COLUMN: decorative line (dots positioned by JS) -->
+            <div id="desktop-line" class="timeline-line">
+            </div>
+
+            <!-- RIGHT COLUMN: Jobs 2 (and hidden Job 4), offset down -->
+            <div class="flex flex-col gap-8 mt-16">
+
+              <!-- Desktop Job 2: Universe (RIGHT) -->
+              <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors text-left">
+                <div class="flex flex-col items-start mb-1">
+                  <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Gameplay / Systems Programmer</h3>
+                  <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Dec 2024 - Oct 2025</span>
+                </div>
+                <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">The Universe Platform &bull; Turkey (Remote)</div>
+                <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                  <li>Extended the bridge between the <span class="font-semibold text-gray-900 dark:text-white">custom scripting language</span> and the internal game engine to support gameplay systems and feature development.</li>
+                  <li>Researched and prototyped game concepts to evaluate ideas for <span class="font-semibold text-gray-900 dark:text-white">mini-game production</span>.</li>
+                  <li>Built a reusable <span class="font-semibold text-gray-900 dark:text-white">multiplayer mini-game template</span> that handled synchronization concerns such as <span class="font-semibold text-gray-900 dark:text-white">time sync</span> and <span class="font-semibold text-gray-900 dark:text-white">game state sync</span>.</li>
+                  <li>Developed 2 multiplayer mini-games using the shared template to speed up development and improve consistency.</li>
+                  <li>Implemented <span class="font-semibold text-gray-900 dark:text-white">CI/CD workflows</span> for Windows, macOS, and Android using <span class="font-semibold text-gray-900 dark:text-white">Docker</span> and <span class="font-semibold text-gray-900 dark:text-white">GitHub Actions</span>.</li>
+                </ul>
+              </div>
+
+              <!-- Desktop Hidden: Job 4 Masomo (RIGHT) -->
+              <div class="hidden-experience-group hidden">
+                <div class="timeline-card animate-on-scroll bg-white dark:bg-slate-800/60 p-5 rounded-xl shadow-sm dark:shadow-none border border-gray-100 dark:border-slate-700/50 transition-colors text-left">
+                  <div class="flex flex-col items-start mb-1">
+                    <h3 class="font-bold text-gray-900 dark:text-white text-lg transition-colors">Intern Game Developer</h3>
+                    <span class="text-sm text-gray-500 dark:text-slate-400 font-medium transition-colors mt-1">Nov 2023 - Jan 2024</span>
+                  </div>
+                  <div class="text-gray-500 dark:text-slate-400 text-sm mb-3 transition-colors">Masomo &bull; Turkey (Remote)</div>
+                  <ul class="list-disc list-outside ml-4 text-gray-600 dark:text-slate-300 text-sm transition-colors space-y-1.5">
+                    <li>Engineered an Arkanoid clone utilizing <span class="font-semibold text-gray-900 dark:text-white">C++</span> and <span class="font-semibold text-gray-900 dark:text-white">Cocos2d-x</span>, focusing on manual memory management and core game loops.</li>
+                    <li>Designed and implemented a custom <span class="font-semibold text-gray-900 dark:text-white">Dependency Injection</span> framework from scratch to enforce decoupled, modular code architecture.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Show More Button -->
+          <div class="mt-12 text-center relative z-20">
+            <button id="show-more-btn" class="inline-flex justify-center items-center px-6 py-2.5 border border-gray-300 dark:border-slate-600 shadow-sm text-sm font-medium rounded-full text-gray-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-slate-900">
+              Show More Experience
+              <svg id="show-more-icon" class="ml-2 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center transition-colors animate-on-scroll">Featured Projects</h2>
+          
+          <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+            <!-- Rendered dynamically from src/projects.json -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-900/40 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 text-center transition-colors animate-on-scroll">Skills & Expertise</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+            <div class="bg-white dark:bg-slate-800/60 p-6 rounded-xl border border-gray-200 dark:border-slate-700/50 shadow-sm dark:shadow-none transition-colors">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-100 dark:border-slate-700 pb-2">Languages</h3>
+              <ul class="space-y-2 text-gray-600 dark:text-slate-300 text-sm">
+                <li><span class="font-medium text-gray-900 dark:text-slate-200">Core:</span> C++, C#</li>
+                <li><span class="font-medium text-gray-900 dark:text-slate-200">Working Knowledge:</span> Python, Lua, Uniscript, JavaScript</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-800/60 p-6 rounded-xl border border-gray-200 dark:border-slate-700/50 shadow-sm dark:shadow-none transition-colors">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-100 dark:border-slate-700 pb-2">Systems & Architecture</h3>
+              <ul class="space-y-2 text-gray-600 dark:text-slate-300 text-sm">
+                <li><span class="font-medium text-gray-900 dark:text-slate-200">Low-Level:</span> Custom Memory Allocators, Multithreading, Core Game Loops</li>
+                <li><span class="font-medium text-gray-900 dark:text-slate-200">Design:</span> ECS / Data-Oriented Design, Dependency Injection, System Optimization</li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800/60 p-6 rounded-xl border border-gray-200 dark:border-slate-700/50 shadow-sm dark:shadow-none transition-colors">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-100 dark:border-slate-700 pb-2">Engines & Tools</h3>
+              <ul class="space-y-2 text-gray-600 dark:text-slate-300 text-sm">
+                <li><span class="font-medium text-gray-900 dark:text-slate-200">Tech:</span> DirectX 12, Unity, Unreal Engine, Cocos2d-x</li>
+                <li><span class="font-medium text-gray-900 dark:text-slate-200">Tooling:</span> CMake, Git, GitHub Actions, Google Mock, Zenject</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Community Card -->
+          <div class="mt-8 w-full bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-500/20 p-6 rounded-xl shadow-sm dark:shadow-none transition-colors text-center md:text-left flex flex-col md:flex-row items-center gap-6 animate-on-scroll">
+            <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-800/50 rounded-full flex items-center justify-center flex-shrink-0 text-indigo-600 dark:text-indigo-400">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            </div>
+            <div class="w-full">
+              <div class="flex flex-col xl:flex-row xl:items-center justify-between mb-2">
+                <h3 class="font-bold text-gray-900 dark:text-white text-lg">Former Co-Leader, UNOG Graphics Programming Community</h3>
+                <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-1 xl:mt-0">Jan 2024 - Sep 2025</span>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-slate-400">
+                Led a 50+ member community, organized workshops on shaders and rendering, and coordinated sessions with professionals from Apple, Microsoft, and Splash Damage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 transition-colors">Get In Touch</h2>
+          <p class="text-lg text-gray-600 dark:text-slate-400 mb-10 transition-colors">
+            Interested in my work or looking to collaborate? Feel free to reach out via email or check out my repositories.
+          </p>
+          <a href="mailto:utku@mm.st" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-500 transition-colors shadow-sm dark:shadow-none">
+            Say Hello
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="bg-gray-50 dark:bg-slate-900 py-8 border-t border-gray-200 dark:border-slate-800 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 dark:text-slate-500 text-sm transition-colors">
+          &copy; 2026 Utkucan Ay. Game Developer & System Programmer.
+        </p>
+        <div class="flex space-x-6">
+          <a href="https://github.com/utkucnay" target="_blank" class="text-gray-400 dark:text-slate-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <span class="sr-only">GitHub</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://utkucnay.itch.io/" target="_blank" class="text-gray-400 dark:text-slate-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <span class="sr-only">Itch.io</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.513 15.65c.34 2.825 1.135 5.093 2.148 6.27.766.89 1.624.895 4.382.906h6.082c2.758-.011 3.616-.016 4.382-.906 1.013-1.177 1.808-3.445 2.148-6.27l1.097-11.603c.123-1.306-.882-2.45-2.193-2.52-2.91-.157-5.837-.157-8.742-.157-2.905 0-5.832 0-8.742.157-1.311.07-2.316 1.214-2.193 2.52l1.097 11.603zm4.646-7.854c1.172 0 2.122.95 2.122 2.122s-.95 2.122-2.122 2.122-2.122-.95-2.122-2.122.95-2.122 2.122-2.122zm9.682 0c1.172 0 2.122.95 2.122 2.122s-.95 2.122-2.122 2.122-2.122-.95-2.122-2.122.95-2.122 2.122-2.122zm-4.841 5.378c1.378 0 2.5 1.122 2.5 2.5s-1.122 2.5-2.5 2.5-2.5-1.122-2.5-2.5 1.122-2.5 2.5-2.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

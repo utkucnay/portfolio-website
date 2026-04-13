@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Unity Runtime Template",
+    "description": "A Unity project template built around <span class=\"font-semibold text-gray-900 dark:text-white\">custom memory allocators</span> (Persist, Arena, Stack) and <span class=\"font-semibold text-gray-900 dark:text-white\">fixed-capacity, GC-free data structures</span> for predictable runtime behavior. Features <span class=\"font-semibold text-gray-900 dark:text-white\">handle-based access</span> with generation checks, a <span class=\"font-semibold text-gray-900 dark:text-white\">modular system architecture</span> with explicit assembly dependencies, and reusable runtime primitives for performance-first projects.",
+    "tags": [
+      { "label": "C#", "color": "indigo" },
+      { "label": "Unity", "color": "blue" },
+      { "label": "Memory Management", "color": "green" },
+      { "label": "Data-Oriented Design", "color": "purple" }
+    ],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/utkucnay/Open-World-Template", "type": "github" }
+    ],
+    "video": null,
+    "icon": "code"
+  },
+  {
+    "title": "Universe Multiplayer Mini-Games",
+    "description": "Developed <span class=\"font-semibold text-gray-900 dark:text-white\">multiplayer mini-games</span> for <span class=\"font-semibold text-gray-900 dark:text-white\">The Universe Platform</span> including physics-based bomb-throwing and free-fall mechanics. Created custom <span class=\"font-semibold text-gray-900 dark:text-white\">Tween</span> and <span class=\"font-semibold text-gray-900 dark:text-white\">node-based IK animation</span> libraries to standardize team workflow.",
+    "tags": [
+      { "label": "Uniscript", "color": "yellow" },
+      { "label": "Universe Engine", "color": "gray" },
+      { "label": "Multiplayer", "color": "rose" }
+    ],
+    "links": [
+      { "label": "Website", "url": "https://theuniverse.now/", "type": "external" }
+    ],
+    "video": "https://www.youtube.com/embed/FnbvfQXPM9s",
+    "icon": "cube"
+  },
+  {
+    "title": "Indie Games Collection",
+    "description": "Created deep <span class=\"font-semibold text-gray-900 dark:text-white\">AI and gameplay systems</span> for titles like <em>Gladiator Graveyard</em> and <em>NecSurvimancery</em>. Integrated complex <span class=\"font-semibold text-gray-900 dark:text-white\">action-based</span> and <span class=\"font-semibold text-gray-900 dark:text-white\">state-machine AI</span> techniques.",
+    "tags": [
+      { "label": "Unity", "color": "cyan" },
+      { "label": "C#", "color": "purple" },
+      { "label": "AI Systems", "color": "sky" }
+    ],
+    "links": [
+      { "label": "Itch.io Profile", "url": "https://utkucnay.itch.io/", "type": "external" }
+    ],
+    "video": "https://www.youtube.com/embed/WUTb2CEJyt4",
+    "icon": "bolt"
+  }
+]
